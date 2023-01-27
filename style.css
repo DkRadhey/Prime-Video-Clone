@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background-color: #0f171e;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header section CSS Start */
+
+.header {
+    max-width: 100vw;
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.container {
+    max-width: 100%;
+    height: 100%;
+    background-color: #1a242f;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 16px 48px;
+    z-index: 200;
+}
+
+.brand-logo {
+    width: 112px;
+    max-height: 39px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.browse-menu {
+    color: #8197a4;
+    margin-left: 18px;
+    display: none;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 0 16px;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 8px;
+    padding: 0;
+    width: auto;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    border-bottom: 1px solid #fff;
+    font-weight: 600;
+}
+
+.nav-item .dropdown-icon {
+    color: #8197a4;
+    transform: scale(0.8);
+}
+
+.right-nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav-container .user-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.right-nav-container .user-logo,
+.search-icon {
+    display: inline-block;
+    margin: 8px;
+    padding: 0;
+}
+
+.right-nav-container .search-icon {
+    transform: scale(1.2);
+    color: #8197a4;
+    margin-right: 16px;
+}
+
+.right-nav-container .user-name {
+    margin-right: 16px;
+    font-size: 15px;
+    color: #8197a4;
+    cursor: pointer;
+}
+
+.right-nav-container .user-name:hover {
+    color: #fff;
+}
+/* Header section CSS End */
+
+/* Slider section CSS Start */
+
+.slider-container {
+    max-width: 100vw;
+    height: 350px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.slider-section {
+    width: 800%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.slider-section input {
+    display: none;
+}
+
+.slide {
+    width: 12.5%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 100vw;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    background-color: #8197a4;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -12.5%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -37.5%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio6:checked ~ .first {
+    margin-left: -62.5%;
+}
+
+#radio7:checked ~ .first {
+    margin-left: -75%;
+}
+/* Slider section CSS End */
+
+/* Movie section CSS Start */
+.movies-container {
+    margin: 0 48px 48px;
+    position: relative;
+}
+
+.movies-section {
+    max-height: 210px;
+    position: relative;
+    margin-top: 16px;
+}
+
+.movies-row::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+.section-heading {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0;
+    position: relative;
+}
+
+.movies-row {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0;
+    margin: 14px 0 0;
+    position: relative;
+    overflow-x: scroll;
+    z-index: 100;
+    top: -14px;
+    overflow-y: hidden;
+}
+
+.movie-card {
+    min-width: 284px;
+    max-width: 284px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 8px;
+    border-radius: 4px;
+    top: 00px;
+    position: relative;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    border: 2px solid #009fd5;
+    border-radius: 6px;
+    transform: scale(1.1);
+    z-index: 9999;
+}
+
+.movie-card:hover .movie-name {
+    display: block;
+}
+.movie-card:hover .movie-info {
+    display: block;
+}
+
+.movie-card:hover .movie-item {
+    max-width: 280px;
+}
+
+.movie-item {
+    max-width: 284px;
+    height: 160px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.movie-item:hover {
+    max-width: 280px;
+    z-index: 100;
+}
+
+.movie-name,
+.movie-info {
+    margin-left: 16px;
+    position: absolute;
+}
+
+.movie-name {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    top: 160px;
+    font-size: 14px;
+}
+
+.movie-info {
+    display: none;
+    font-size: 12px;
+    margin-bottom: 16px;
+    top: 200px;
+    color: #8197a4;
+    padding-right: 4px;
+    max-width: 280px;
+}
+/* Movie section CSS End */
+
+/* Footer Section CSS Start*/
+.footer {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.policies {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.policy-items {
+    display: flex;
+    list-style: none;
+    color: #009fd5;
+    margin: 0 6px;
+}
+
+.policy-item {
+    margin: 0 12px;
+}
+
+.copyright {
+    color: #8197a4;
+    margin: 0 6px;
+}
+/* Footer Section CSS End */
+
+@media (max-width: 850px) {
+    .left-nav-container {
+        display: none;
+    }
+
+    .right-nav-container {
+        position: absolute;
+        right: 48px;
+    }
+
+    .policies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .browse-menu {
+        display: inline-block;
+    }
+}
+@media (max-width: 460px) {
+    .right-nav-container .search-icon,
+    .user-name {
+        display: none;
+    }
+
+    .policies {
+        font-size: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
