@@ -88,49 +88,9 @@ function sliderAuto() {
     }, 5000);
 }
 
-{
-    /* <div class="movie-card" id="movie-card">
-    <img
-        class="movie-item"
-        src="https://m.media-amazon.com/images/S/pv-target-images/c2da447cc93a27116ded97e07d3f1d207916c41c516305c6337fc1533a0e6abd._UR1920,1080_SX356_FMjpg_.jpg"
-        alt=""
-    />
-    <h4 class="movie-name" id="movie-name">
-        Money Mafia
-    </h4>
-    <p class="movie-info" id="movie-info"></p>
-</div>; */
-}
-// }
-
-function showinfo() {
-    const movieCard = document.getElementById("movie-card");
-    const movieName = document.getElementById("movie-name");
-    const movieInfo = document.getElementById("movie-info");
-    // let flag = false;
-    // movieName.style.display = "none";
-    // movieInfo.style.display = "none";
-    // movieCard.addEventListener("mouseover", () => {
-    // movieName.style.display = "block";
-    // movieInfo.style.display = "block";
-    //     flag = true;
-    // });
-    // // if (flag == true) {
-    // movieName.style.display = "none";
-    // movieInfo.style.display = "none";
-    // }
-    if (movieCard.onmouseover == true) {
-        movieName.style.display = "block";
-        movieInfo.style.display = "block";
-    } else {
-        movieName.style.display = "none";
-        movieInfo.style.display = "none";
-    }
-}
 
 //////////////////////////////////////
 
 window.addEventListener("load", () => {
     init();
-    // showinfo();
 });
